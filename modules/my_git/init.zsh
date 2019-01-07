@@ -54,6 +54,8 @@ if ! zstyle -t ':prezto:module:git:alias' skip 'yes'; then
   # Commit (c)
   alias gc='git commit --verbose'
   alias gco='git checkout'
+  alias gcom='git checkout master'
+  alias gcod='git checkout develop'
   alias gcp='git cherry-pick --ff'
   alias grv='git revert'
   alias gRh='git reset "HEAD^"'
