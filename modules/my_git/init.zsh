@@ -70,10 +70,10 @@ if ! zstyle -t ':prezto:module:git:alias' skip 'yes'; then
   alias gfcr='git clone --recurse-submodules'
 
   alias ggpull='git pull origin $(git_current_branch)'
-	compdef _git ggpull=git-checkout
+  compdef _git ggpull=git-checkout
 
   # Grep (g)
-	alias gg='git --no-pager grep -n'
+  alias gg='git --no-pager grep -n'
   # alias ggi='git grep --ignore-case'
   # alias ggl='git grep --files-with-matches'
   # alias ggL='git grep --files-without-matches'
@@ -97,8 +97,9 @@ if ! zstyle -t ':prezto:module:git:alias' skip 'yes'; then
   # Push (p)
   alias gpf='git push --force-with-lease'
   alias gpF='git push --force'
-	alias ggpush='git push origin $(git_current_branch)'
-	compdef _git ggpush=git-checkout
+  alias ggpush='git push origin $(git_current_branch)'
+  alias gfpush='git push --force-with-lease origin $(git_current_branch)'
+  compdef _git ggpush=git-checkout
 
   # Rebase (r)
   alias gr='git rebase'
