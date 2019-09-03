@@ -12,8 +12,6 @@ fi
 
 # Customize to your needs...
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
 export PATH=$PATH:/usr/local/git/bin:/usr/local/bin
 eval $(docker-machine env)
 
@@ -22,3 +20,13 @@ eval $(docker-machine env)
   eval "$(rbenv init -)"
 
 defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES
+
+[[ -d ~/.pyenv  ]] && \
+  export PYENV_ROOT="$HOME/.pyenv" && \
+  export PATH="$PYENV_ROOT/bin:$PATH" && \
+  eval "$(pyenv init -)"
+
+[[ -d ~/.nodebrew  ]] && \
+  export PATH="$HOME/.nodebrew/current/bin:$PATH"
+
+export PATH="/Applications/CMake.app/Contents/bin:$PATH"
